@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    font-size: 16px;
+}
+nav{
+    background-color: #FAFAFA;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav > img{
+    width: 21.75rem;
+    height: 2.43rem;
+}
+ul{
+    list-style: none;
+    color: #053087;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    margin-left: 4.25rem;
+}
+li > img{
+    padding: .68rem .81rem 0 1rem;
+}
+input[type="search"]{
+    margin-left: 1.62rem;
+}
+
+/*BANNER*/
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 5rem;
+    background-color: #F2F6FF;
+}
+.text{
+    padding-right: 3.18rem;
+    margin-right: 5rem;
+}
+.text > p{
+    margin-top: 2rem;
+}
+.buttons{
+    margin-top: 2rem;
+}
+.mainButton{
+    background-color: #0F62FE;
+    color: #FFFF;
+    font-weight: 600;
+    border: solid #0F62FE;
+    padding: 1rem 2rem;
+}
+.secButton{
+    background-color: #FFFF;
+    color: #0F62FE;
+    font-weight: 600;
+    border: solid #0F62FE;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+}
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #053087;
+}
+h2{
+    font-size: 2.25rem;
+    font-weight: ;
+}
+h3{
+    color: #FF0000;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
