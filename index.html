@@ -6,22 +6,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Brasil ao Norte</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="dropDownMenu">
             <img src="./images/logo-inline.svg" text="Logo Brasil ao Norte" alt="error">
-            <ul>
-                <li><img src="./images/icons/menu-icon.svg" alt="error">Menu</li>
-                <li>Comida <img src="./images/icons/dropDown-icon.svg" alt="error"></li>
-                <li>Saúde <img src="./images/icons/dropDown-icon.svg" alt="error"></li>
-            </ul>
-            <form>
-                <input type="search" placeholder="Vancouver">
-                <input type="button" value="Cadastre seu negócio">
-            </form>
+            <button><img src="./images/icons/menu-icon.svg" alt="error"> Categorias</button>
+            <div class="content">
+                <a href="">Página Inicial</a>
+                <a href="">Restaurantes</a>
+                <a href="">Beleza e Estética</a>
+                <a href="">Saúde</a>
+                <a href="">Contabilidade</a>
+                <a href="">Advocacia</a>
+                <a href="">Serviços de Imigração</a>
+                <a href="">Cultura</a>
+                <a href="">Outros</a>
+            </div>
+            <input type="search" placeholder="Vancouver">
+            <input type="button" value="Cadastre seu negócio">
         </nav>
         <section class="banner">
             <article class="text">
@@ -37,65 +43,122 @@
         </section>
     </header>
     <main>
-        <section>
-            <h3>Vancouver, BC</h3>
-            <h2>Restaurantes</h2>
-            <article class="card">
-                <img src="./images/boteco-img.svg" text="Boteco Brasil" alt="error">
-                <h5>Restaurantes</h5>
-                <h4>Boteco Brasil</h4>
-                <p>Este local alegre e colorido serve culinária brasileira caseira e oferece música ao vivo aos finais de semana.</p>
-                <div>
-                    <img src="" alt="">
-                    <p class="address">2545 Nanaimo St, Vancouver, BC V5N 5E6</p>
-                    <p class="priceAverage"><span id="yellow">$$$</span>$$</p>
-                </div>
-                <button>Saiba mais <img src="./images/icons/arrow-icon.svg" alt="error"></button>
-            </article>
-            <article class="card">
-                <img src="./images/rio-img.svg" text="Rio Brazilian SteakHouse" alt="error">
-                <h5>Restaurantes</h5>
-                <h4>Rio Brazilian SteakHouse</h4>
-                <p>Restaurante de churrascaria brasileira que oferece um buffet rodízio de carnes, com opções como carne bovina, porco, cordeiro, frango e costelas, além de petiscos e saladas. Tem buffet à vontade. Tem mesas externas. Serve ótimos coquetéis.</p>
-                <div>
-                    <img src="" alt="">
-                    <p class="address">1122 Denman St, Vancouver, BC V6G 2M8</p>
-                    <p class="priceAverage"><span id="yellow">$$$$</span>$</p>
-                </div>
-                <button>Saiba mais <img src="./images/icons/arrow-icon.svg" alt="error"></button>
-            </article>
+        <section class="post">
+            <div class="title">
+                <h3>Vancouver, BC</h3>
+                <h2>Restaurantes</h2>
+            </div>
+            <span class="slider">
+                <button id="previous"><img id="rightArrow" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                <article class="card">
+                    <img src="./images/boteco-img.jpg" text="Boteco Brasil" alt="error">
+                    <div class="summary">
+                        <h5>Restaurantes</h5>
+                        <h4>Boteco Brasil</h4>
+                        <p>Este local alegre e colorido serve culinária brasileira caseira e oferece música ao vivo aos finais de semana.</p>
+                    </div>
+                    <div class="info">
+                        <img src="" alt="">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">2545 Nanaimo St, Vancouver, BC V5N 5E6</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                </article>
+                <article class="card">
+                    <img src="./images/rio-img.jpg" text="Rio Brazilian SteakHouse" alt="error">
+                    <div class="summary">
+                        <h5>Restaurantes</h5>
+                        <h4>Rio Brazilian Steakhouse</h4>
+                        <p>Restaurante de churrascaria brasileira que oferece um buffet rodízio de carnes à vontade, além de petiscos e saladas.</p>
+                    </div>
+                    <div class="info">
+                        <img src="" alt="">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">1122 Denman St, Vancouver, BC V6G 2M8</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$$</span>$</p>
+                    </div>
+                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                </article>
+                <article class="card">
+                    <img src="./images/brazilgourmet-img.jpg" text="Boteco Brasil" alt="error">
+                    <div class="summary">
+                        <h5>Restaurantes</h5>
+                        <h4>Brazil Gourmet</h4>
+                        <p>Pastelaria brasileira que também oferece pão de queijo e barriga de porco, estilo street food.</p>
+                    </div>
+                    <div class="info">
+                        <img src="" alt="">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">123 Carrie Cates Ct, North Vancouver, BC V7M 3K7</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
+                    </div>
+                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                </article>
+                <article class="card">
+                    <img src="./images/mineiros.jpg" text="Boteco Brasil" alt="error">
+                    <div class="summary">
+                        <h5>Restaurantes</h5>
+                        <h4>Mineiros Brazilian Bistro</h4>
+                        <p>Especializados na cozinha mineira, lá você encontrará bife à cavalo, nhoque, e rabada.</p>
+                    </div>
+                    <div class="info">
+                        <img src="" alt="">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">7542 Edmonds St, Burnaby, BC V3N 1B4</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
+                    </div>
+                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                </article>
+                <article class="card">
+                    <img src="./images/braziliant-img.png" text="Boteco Brasil" alt="error">
+                    <div class="summary">
+                        <h5>Restaurantes</h5>
+                        <h4>Braziliant Cafe & Catering</h4>
+                        <p>Especializados em catering. De aperitivos a prato principal, oferecem comida brasileira para o seu evento.</p>
+                    </div>
+                    <div class="info">
+                        <img src="" alt="">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">552 Seymour St, Vancouver, BC V6B 3J5</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
+                    </div>
+                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                </article>
+                <button id="next"><img src="./images/icons/arrow-icon.svg" alt="error"></button>
+            </span>
         </section>
-        <section>
-            <h3>Vancouver, BC</h3>
-            <h2>Serviços de Saúde</h2>
-            <article class="card">
-                <img src="./images/boteco-img.svg" text="Boteco Brasil" alt="error">
-                <h5>Restaurantes</h5>
-                <h4>Boteco Brasil</h4>
-                <p>Este local alegre e colorido serve culinária brasileira caseira e oferece música ao vivo aos finais de semana.</p>
-                <div>
-                    <img src="" alt="">
-                    <p class="address">2545 Nanaimo St, Vancouver, BC V5N 5E6</p>
-                    <p class="priceAverage"><span id="yellow">$$$</span>$$</p>
-                </div>
-                <button>Saiba mais <img src="./images/icons/arrow-icon.svg" alt="error"></button>
-            </article>
-            <article class="card">
-                <img src="./images/rio-img.svg" text="Rio Brazilian SteakHouse" alt="error">
-                <h5>Restaurantes</h5>
-                <h4>Rio Brazilian SteakHouse</h4>
-                <p>Restaurante de churrascaria brasileira que oferece um buffet rodízio de carnes, com opções como carne bovina, porco, cordeiro, frango e costelas, além de petiscos e saladas. Tem buffet à vontade. Tem mesas externas. Serve ótimos coquetéis.</p>
-                <div>
-                    <img src="" alt="">
-                    <p class="address">1122 Denman St, Vancouver, BC V6G 2M8</p>
-                    <p class="priceAverage"><span id="yellow">$$$$</span>$</p>
-                </div>
-                <button>Saiba mais <img src="./images/icons/arrow-icon.svg" alt="error"></button>
-            </article>
+        <section class="register">
+            <h3>Anuncie seu negócio</h3>
+            <p>Quer fazer parte dessa rede? <br>
+            Cadastre seu serviço ou empresa!</p>
+            <form action="">
+                <label for="Name">Nome do seu negócio</label>
+                <input type="text" placeholder="Digite seu nome ou nome do seu negócio">
+                <label for="E-mail">Seu e-mail</label>
+                <input type="email" placeholder="Digite seu e-mail">
+                <label for="Categoria">Categoria</label>
+                <select name="Categories" id="category">
+                    <option value="categoria">Escolha a categoria do seu negócio</option>
+                    <option value="restaurantes">Restaurantes</option>
+                    <option value="beleza">Beleza e Estética</option>
+                    <option value="saúde">Saúde</option>
+                    <option value="contabilidade">Contabilidade</option>
+                    <option value="advocacia">Advocacia</option>
+                    <option value="imigração">Serviços de Imigração</option>
+                    <option value="cultura">Cultura</option>
+                    <option value="outros">Outros</option>
+                </select>
+                <label for="Cidade">Cidade</label>
+                <input type="text" placeholder="Vancouver">
+                <label for="URL">Link do Google</label>
+                <input type="text" placeholder="Digite o link do se negócio">
+                <label for="Descrição">Descreva seu negócio em até 3 linhas</label>
+                <textarea name="Description" id="description"></textarea>
+                <input type="submit">
+            </form>
         </section>
     </main>
     <footer>
-
+        <img src="./images/logo-white.svg" text="logo-white" alt="error">
+        <p>Brasil ao Norte •  2025 •  brasilaonorte@gmail.com</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

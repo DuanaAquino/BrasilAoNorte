@@ -10,27 +10,77 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    border: 0;
+    border-bottom: solid #DDD1D6;
 }
 nav > img{
     width: 21.75rem;
     height: 2.43rem;
 }
-ul{
+.dropDownMenu button{
     list-style: none;
     color: #053087;
+    background-color: #FFFF;
+    border: solid #C1C7CD;
     font-weight: 600;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 2.5rem;
-    margin-left: 4.25rem;
+    margin: 0 13rem 0 4.25rem;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    position: relative;
 }
-li > img{
-    padding: .68rem .81rem 0 1rem;
+.content a{
+    display: block;
+    color: #053087;
+    text-decoration: none;
+    padding: 1rem 2.5rem 1rem 1rem;
+}
+.dropDownMenu .content{
+    display: none;
+    position: absolute;
+    left: 31rem;
+    top: 4.5rem;
+    background-color: #FFFF;
+    min-width: 12.68rem;
+    border: solid #C1C7CD;
+}
+.dropDownMenu:hover .content{
+    display: inline-block;
+}
+.dropDownMenu:hover button{
+    background-color: #F2F6FF;
+}
+.content a:hover{
+    color: #FF0000;
 }
 input[type="search"]{
     margin-left: 1.62rem;
+    background-color: #F2F4F8;
+    border: 0;
+    border-bottom: solid #FF0000;
+    padding: .81rem 1rem .81rem 2.5rem;
+    background-image: url(./images/icons/magnifying-icon.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1rem 1rem;
+    background-position-x: 5%;
+    box-sizing: border-box;
+    outline: none;
 }
+input[type="button"]{
+    background-color: #053087;
+    color: #FFFF;
+    font-weight: 600;
+    border: solid #0F62FE;
+    padding: 1rem 2rem;
+    margin-left: .25rem;
+}    
 
 /*BANNER*/
 .banner{
@@ -38,7 +88,7 @@ input[type="search"]{
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    padding: 5rem;
+    padding: 10rem 5rem 5rem;
     background-color: #F2F6FF;
 }
 .text{
@@ -73,10 +123,164 @@ h1{
 }
 h2{
     font-size: 2.25rem;
-    font-weight: ;
+    font-weight: 600;
 }
 h3{
     color: #FF0000;
     text-transform: uppercase;
     margin-bottom: .5rem;
+}
+h4{
+    font-size: 1.25rem;
+    color: #001D6C;
+    font-weight: 600;
+}
+h5{
+    font-size: .87rem;
+    color:#FF0000;
+    font-weight: 600;
+}
+.post{
+    background-color: #FAFAFA;
+}
+.title {
+    text-align: center;
+    padding: 4rem 1.68rem;
+}
+.slider{
+    display: flex;
+    flex-direction: row;
+    padding: 0 2.62rem 6.3rem;
+    gap: 1rem;
+    overflow-x: hidden;   
+}
+#previous{
+    background-color: #FAFAFA;
+    border: 0;
+    cursor: pointer;
+}
+#next{
+    background-color: #FAFAFA;
+    border: 0;
+    cursor: pointer;
+}
+.card{
+    width: 19.25rem;
+    height: 32.06rem;
+    border: solid #DDE1E6;
+    border-radius: .5rem;
+    background-color: #FFFF;
+}
+.card > img{
+    width: 19.25rem;
+    height: 13.75rem;
+    border-radius: .5rem .5rem 0 0;
+}
+.summary{
+    padding: 1.3rem 1rem 0 1rem;
+}
+.summary > h4{
+    margin-top: .25rem;
+}
+.summary > p{
+    font-size: .87rem;
+    margin-top: 1rem;
+}
+.info{
+    padding: .75rem 1rem;
+}
+.address{
+    font-size: .87rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+.address > img{
+    padding-right: .75rem;
+}
+.priceAverage{
+    color: #CFE1F3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: .5rem;
+}
+.priceAverage > img{
+    padding-right: .75rem;
+}
+#yellow{
+    color: #FDD216;
+}
+.cardButton{
+    border: none;    
+    background-color: #FFFF;
+    color: #053087;
+    font-size: .87rem;
+    font-weight: 700;
+    padding: .5rem 6.6rem;
+    display: flex;
+    align-items: center;
+}
+.cardButton > img{
+    padding-left: 1rem;
+    border-radius: .5rem;
+}
+#rightArrow {
+    transform: rotate(180deg);
+}
+.cardWrapper{
+    max-width: 1100ps;
+    margin: 0 60px 35px;
+    padding: 20px 10px;
+    overflow: hidden;
+}
+
+/*FORM*/
+
+.register > h3{
+    text-align: center;
+}
+.register > p{
+    text-align: center;
+    color: #053087;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+.register > form{
+    display: flex;
+    flex-direction: column;
+    padding: 5.25rem 23.12rem 5rem 23.12rem;
+}
+form > label{
+    margin: 1rem 0 .5rem 0;
+}
+form > input[type="text"],input[type="email"],select,textarea{
+    background-color: #F2F4F8;
+    border: 0;
+    border-bottom: solid #C1C7CD;
+    padding: .81rem 1rem .81rem .81rem;
+    outline: none;
+}
+form > input[type="submit"]{
+    background-color: #053087;
+    color: #FFFF;
+    font-weight: 600;
+    border: solid #0F62FE;
+    padding: 1rem 1rem;
+    margin: 1rem 0 0 21rem;
+    width: 6.62rem;
+}
+
+/*FOOTER*/
+
+footer{
+    font-weight: 100;
+    color: #FFFF;
+    background-color: #053087;
+    text-align: center;
+    padding: 2.37rem 0 3.06rem 0;
+}
+footer > p{
+    margin-top: 1.68rem;
 }
