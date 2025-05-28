@@ -50,10 +50,7 @@ nav > img{
     min-width: 12.68rem;
     border: solid #C1C7CD;
 }
-.dropDownMenu:hover .content{
-    display: inline-block;
-}
-.dropDownMenu:hover button{
+.dropDownMenu > button:hover{
     background-color: #F2F6FF;
 }
 .content a:hover{
@@ -73,12 +70,13 @@ input[type="search"]{
     box-sizing: border-box;
     outline: none;
 }
-input[type="button"]{
+#registerButton{
     background-color: #053087;
     color: #FFFF;
-    font-weight: 600;
+    font-weight: 300;
     border: solid #0F62FE;
     padding: 1rem 2rem;
+    width: 14.43rem;
     margin-left: .25rem;
 }    
 
@@ -142,17 +140,17 @@ h5{
 }
 .post{
     background-color: #FAFAFA;
+    padding-bottom: 6.31rem;
 }
 .title {
     text-align: center;
     padding: 4rem 1.68rem;
 }
-.slider{
+.cardContainer{
     display: flex;
     flex-direction: row;
-    padding: 0 2.62rem 6.3rem;
-    gap: 1rem;
-    overflow-x: hidden;   
+    padding: 0 3rem;
+    gap: 1rem; 
 }
 #previous{
     background-color: #FAFAFA;
@@ -175,6 +173,7 @@ h5{
     width: 19.25rem;
     height: 13.75rem;
     border-radius: .5rem .5rem 0 0;
+    object-fit: cover;    
 }
 .summary{
     padding: 1.3rem 1rem 0 1rem;
@@ -218,28 +217,108 @@ h5{
     color: #053087;
     font-size: .87rem;
     font-weight: 700;
-    padding: .5rem 6.6rem;
+    padding: .6rem 6.6rem;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .cardButton > img{
     padding-left: 1rem;
     border-radius: .5rem;
 }
-#rightArrow {
-    transform: rotate(180deg);
+.cardButtonRestaurant{
+    border: none;    
+    background-color: #FFFF;
+    color: #053087;
+    font-size: .87rem;
+    font-weight: 700;
+    padding: 1.4rem 6.6rem .5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
-.cardWrapper{
-    max-width: 1100ps;
-    margin: 0 60px 35px;
-    padding: 20px 10px;
-    overflow: hidden;
+.cardButtonRestaurant > img{
+    padding-left: 1rem;
+    border-radius: .5rem;
+}
+.card > a{
+    text-decoration: none;
+}
+
+#Braziliant{
+    display: none;
+}
+#NataliaSimoes{
+    display: none;
+}
+#BrunaCosta{
+    display: none;
+}
+#restaurantLeftArrow {
+    transform: rotate(180deg);
+    background-color: #FAFAFA;
+    border: 0;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+#restaurantRightArrow {
+    cursor: pointer;  
+    margin-left: 1.5rem;
+}
+.bulletPoints{
+    text-align: center;
+    margin-top: 2.2rem;
+}
+#restaurantBulletPointLeft{
+    display: center;
+}
+#restaurantBulletPointRight{
+    display: none;
+}
+#beautyLeftArrow {
+    transform: rotate(180deg);
+    background-color: #FAFAFA;
+    border: 0;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+#beautyRightArrow {
+    cursor: pointer;  
+    margin-left: 1.5rem;
+}
+#beautyBulletPointLeft{
+    display: center;
+}
+#beautyBulletPointRight{
+    display: none;
+}
+#healthLeftArrow {
+    transform: rotate(180deg);
+    background-color: #FAFAFA;
+    border: 0;
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+#healthRightArrow {
+    cursor: pointer;  
+    margin-left: 1.5rem;
+}
+#healthBulletPointLeft{
+    display: center;
+}
+#healthBulletPointRight{
+    display: none;
 }
 
 /*FORM*/
 
+.register{
+    border: 0;
+    border-top: .06rem solid #DDE1E6;
+}
 .register > h3{
     text-align: center;
+    margin-top: 5rem;
 }
 .register > p{
     text-align: center;
@@ -270,6 +349,7 @@ form > input[type="submit"]{
     padding: 1rem 1rem;
     margin: 1rem 0 0 21rem;
     width: 6.62rem;
+    cursor: pointer;
 }
 
 /*FOOTER*/

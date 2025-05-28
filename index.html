@@ -14,12 +14,12 @@
     <header>
         <nav class="dropDownMenu">
             <img src="./images/logo-inline.svg" text="Logo Brasil ao Norte" alt="error">
-            <button><img src="./images/icons/menu-icon.svg" alt="error"> Categorias</button>
+            <button id="categories" onclick="SlideDown()" onmouseleave="SlideUp()" ><img src="./images/icons/menu-icon.svg" alt="error"> Categorias</button>
             <div class="content">
                 <a href="">Página Inicial</a>
-                <a href="">Restaurantes</a>
-                <a href="">Beleza e Estética</a>
-                <a href="">Saúde</a>
+                <a href="#restaurant">Restaurantes</a>
+                <a href="#beauty">Beleza e Estética</a>
+                <a href="#saude">Saúde</a>
                 <a href="">Contabilidade</a>
                 <a href="">Advocacia</a>
                 <a href="">Serviços de Imigração</a>
@@ -27,7 +27,7 @@
                 <a href="">Outros</a>
             </div>
             <input type="search" placeholder="Vancouver">
-            <input type="button" value="Cadastre seu negócio">
+            <a href="#register"><button id="registerButton">Cadastre seu negócio</button></a>
         </nav>
         <section class="banner">
             <article class="text">
@@ -36,21 +36,22 @@
                 <p>Busque por cidade e confira a lista de empresas e prestadores de serviços brasileiros em terras canadenses. Para se sentir confortável com quem fala a sua língua e entende suas necessidades.</p>
                 <div class="buttons">
                     <button class="mainButton">Busque por categoria</button>
-                    <button class="secButton">Cadastre seu negócio</button>
+                    <a href=""><button class="secButton">Cadastre seu negócio</button></a>
                 </div>
             </article>
                 <img src="./images/banner-img.svg" text="Banner" alt="error">
         </section>
     </header>
     <main>
+        <!--                                                       RESTAURANTES                                                          -->
         <section class="post">
-            <div class="title">
+            <div class="title" id="restaurant">
                 <h3>Vancouver, BC</h3>
                 <h2>Restaurantes</h2>
             </div>
-            <span class="slider">
-                <button id="previous"><img id="rightArrow" src="./images/icons/arrow-icon.svg" alt="error"></button>
-                <article class="card">
+            <span class="cardContainer">
+                <img id="restaurantLeftArrow" onclick="restaurantScrollLeft()" src="./images/icons/arrow-icon.svg" alt="error">
+                <article class="card" id="Boteco">
                     <img src="./images/boteco-img.jpg" text="Boteco Brasil" alt="error">
                     <div class="summary">
                         <h5>Restaurantes</h5>
@@ -58,13 +59,12 @@
                         <p>Este local alegre e colorido serve culinária brasileira caseira e oferece música ao vivo aos finais de semana.</p>
                     </div>
                     <div class="info">
-                        <img src="" alt="">
                         <p class="address"><img src="./images/icons/location-icon.svg" alt="error">2545 Nanaimo St, Vancouver, BC V5N 5E6</p>
                         <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
                     </div>
-                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                    <a href="https://maps.app.goo.gl/Z94irZQ9QJ1z3tD78"><button class="cardButtonRestaurant">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
                 </article>
-                <article class="card">
+                <article class="card" id="Rio">
                     <img src="./images/rio-img.jpg" text="Rio Brazilian SteakHouse" alt="error">
                     <div class="summary">
                         <h5>Restaurantes</h5>
@@ -72,66 +72,226 @@
                         <p>Restaurante de churrascaria brasileira que oferece um buffet rodízio de carnes à vontade, além de petiscos e saladas.</p>
                     </div>
                     <div class="info">
-                        <img src="" alt="">
                         <p class="address"><img src="./images/icons/location-icon.svg" alt="error">1122 Denman St, Vancouver, BC V6G 2M8</p>
                         <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$$</span>$</p>
                     </div>
-                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                    <a href="https://maps.app.goo.gl/kXF2t6yJb68Y8QWP6"><button class="cardButtonRestaurant">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
                 </article>
-                <article class="card">
-                    <img src="./images/brazilgourmet-img.jpg" text="Boteco Brasil" alt="error">
+                <article class="card" id="BrazilGourmet">
+                    <img src="./images/brazilgourmet-img.jpg" text="Brazil Gourmet" alt="error">
                     <div class="summary">
                         <h5>Restaurantes</h5>
                         <h4>Brazil Gourmet</h4>
                         <p>Pastelaria brasileira que também oferece pão de queijo e barriga de porco, estilo street food.</p>
                     </div>
                     <div class="info">
-                        <img src="" alt="">
                         <p class="address"><img src="./images/icons/location-icon.svg" alt="error">123 Carrie Cates Ct, North Vancouver, BC V7M 3K7</p>
                         <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
                     </div>
-                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                    <a href="https://maps.app.goo.gl/qawjrmTLYXnbxWNX7"><button class="cardButtonRestaurant">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
                 </article>
-                <article class="card">
-                    <img src="./images/mineiros.jpg" text="Boteco Brasil" alt="error">
+                <article class="card" id="Mineiros">
+                    <img src="./images/mineiros.jpg" text="Mineiros" alt="error">
                     <div class="summary">
                         <h5>Restaurantes</h5>
                         <h4>Mineiros Brazilian Bistro</h4>
                         <p>Especializados na cozinha mineira, lá você encontrará bife à cavalo, nhoque, e rabada.</p>
                     </div>
                     <div class="info">
-                        <img src="" alt="">
                         <p class="address"><img src="./images/icons/location-icon.svg" alt="error">7542 Edmonds St, Burnaby, BC V3N 1B4</p>
                         <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
                     </div>
-                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                    <a href="https://maps.app.goo.gl/F3KxTxb7SXRVaZrG9"><button class="cardButtonRestaurant">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
                 </article>
-                <article class="card">
-                    <img src="./images/braziliant-img.png" text="Boteco Brasil" alt="error">
+                <article class="card" id="Braziliant">
+                    <img src="./images/braziliant-img.png" text="Braziliant" alt="error">
                     <div class="summary">
                         <h5>Restaurantes</h5>
                         <h4>Braziliant Cafe & Catering</h4>
                         <p>Especializados em catering. De aperitivos a prato principal, oferecem comida brasileira para o seu evento.</p>
                     </div>
                     <div class="info">
-                        <img src="" alt="">
                         <p class="address"><img src="./images/icons/location-icon.svg" alt="error">552 Seymour St, Vancouver, BC V6B 3J5</p>
                         <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
                     </div>
-                    <button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button>
+                    <a href="https://maps.app.goo.gl/wai9ezTmVhS9Pyv16"><button class="cardButtonRestaurant">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
                 </article>
-                <button id="next"><img src="./images/icons/arrow-icon.svg" alt="error"></button>
+                <img id="restaurantRightArrow" onclick="restaurantScrollRight()" src="./images/icons/arrow-icon.svg" alt="error">
             </span>
+            <div class="bulletPoints">
+                    <img id="restaurantBulletPointLeft" src="./images/icons/bullet-icon.svg" alt="error">
+                    <img id="restaurantBulletPointRight" src="./images/icons/bullet-icon.svg" alt="error">
+            </div>
         </section>
-        <section class="register">
+        <!--                                                      BELEZA E ESTÉTICA                                                            -->
+        <section class="post">
+            <div class="title" id="beauty">
+                <h3>Vancouver, BC</h3>
+                <h2>Beleza e Estética</h2>
+            </div>
+            <span class="cardContainer">
+                <img id="beautyLeftArrow" onclick="beautyScrollLeft()" src="./images/icons/arrow-icon.svg" alt="error">
+                <article class="card" id="Brisa">
+                    <img src="./images/brisa-img.png" text="Brisa" alt="error">
+                    <div class="summary">
+                        <h5>Beleza e Estética</h5>
+                        <h4>Brisa Spa & Studio</h4>
+                        <p>Fundado em 2011, é o primeiro em Vancouver a oferecer tratamentos de pele, massagem, drenagem linfática, depilação e unhas no estilo brasileiro.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">1-1399 Fountain Way Ct, Vancouver, BC V6H 4E6</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/fWrdruVhYj5WkLQy8"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="Sil">
+                    <img src="./images/sil-img.jpg" text="Sil Brazil Spa" alt="error">
+                    <div class="summary">
+                        <h5>Beleza e Estética</h5>
+                        <h4>Sil Brazil Spa</h4>
+                        <p>Silvana Grilo é uma esteticista certificada e oferece depilação brasileira, microagulhamento, remoção de manchas e limpeza profunda.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">833 Carnarvon St #104, New Westminster, BC V3M 1G2</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/ATakgtbEswUFYJ7r8"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="DonaLucia">
+                    <img src="./images/donalucia-img.jpg" text="Dona Lucia" alt="error">
+                    <div class="summary">
+                        <h5>Beleza e Estética</h5>
+                        <h4>Dona Lucia Esthetics Salon</h4>
+                        <p>Fundado em 2008 pela Dona Lucia, esse salão e spa oferece depilação, manicure/pedicure, limpeza e esfoliação facial.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">2813 W Broadway, Vancouver, BC V6K 2G6</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/aMw3pnft4L1F5pby8"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="Nara">
+                    <img src="./images/nara-img.jpg" text="Nara" alt="error">
+                    <div class="summary">
+                        <h5>Beleza e Estética</h5>
+                        <h4>Nara Vasco Skin & Beauty</h4>
+                        <p>Há 12 anos atuando no mercado de beleza no Canadá. Especilizada em tratamentos de pele combinando técnicas aprendidas no Brasil e Canadá.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">Vanity Company, 88 W Pender St #2101, Vancouver, BC V6B 6N9</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/4UFJL1Hup7pf39Br6"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="NataliaSimoes">
+                    <img src="./images/natalia-img.png" text="Natalia Simoes" alt="error">
+                    <div class="summary">
+                        <h5>Beleza e Estética</h5>
+                        <h4>Natalia Simoes Beauty Artist</h4>
+                        <p>Especialista em maquiagem e cabelo para casamentos, também trabalha com Editoriais, Fotografia de Estúdio, Formaturas, Eventos, Filmes e Aulas de automaquiagem.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">Vancouver (sob demanda)</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <a href="https://www.natsimoes.com/"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <img id="beautyRightArrow" onclick="beautyScrollRight()" src="./images/icons/arrow-icon.svg" alt="error">
+            </span>
+            <div class="bulletPoints">
+                    <img id="beautyBulletPointLeft" src="./images/icons/bullet-icon.svg" alt="error">
+                    <img id="beautyBulletPointRight" src="./images/icons/bullet-icon.svg" alt="error">
+            </div>
+        </section>
+        <!--                                                          SAÚDE                                                              -->
+         <section class="post">
+            <div class="title" id="saude">
+                <h3>Vancouver, BC</h3>
+                <h2>Saúde</h2>
+            </div>
+            <span class="cardContainer">
+                <img id="healthLeftArrow" onclick="healthScrollLeft()" src="./images/icons/arrow-icon.svg" alt="error">
+                <article class="card" id="BemStar">
+                    <img src="./images/bemstar-img.png" text="BemStar" alt="error">
+                    <div class="summary">
+                        <h5>Saúde</h5>
+                        <h4>BemStar Holistic Health</h4>
+                        <p>Breno Zilber é um acupunturista registrado, e oferece também terapia com ventosas (cupping) e lasers (cold laser therapy).</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">106, 3237 King George Blvd, Surrey, BC V4P 1Z8</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$</span>$$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/eLeyjDyJH7bCwDFh8"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="Connecta">
+                    <img src="./images/connecta-img.png" text="Connecta" alt="error">
+                    <div class="summary">
+                        <h5>Saúde</h5>
+                        <h4>Connecta Physiotherapy</h4>
+                        <p>Marcel Miura é um fisioterapeuta registrado com mais de 15 anos de experiência. Na sua clíninca trata dores crônica, lesões de esporte e bem-estar.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">970 Burrard St #125, Vancouver, BC V6Z 2R4</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/QtRuURV66xV1iLgF6"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="VidaNova">
+                    <img src="./images/vidanova-img.jpg" text="Vida Nova" alt="error">
+                    <div class="summary">
+                        <h5>Saúde</h5>
+                        <h4>Vida Nova Health</h4>
+                        <p>Dr. Alan Brum é um naturopata que oferece tratamentos naturais para problemas digestivos, alergias, condições autoimunes.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">470 Granville St #418, Vancouver, BC V6C 1V5</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/cAM3HqSrwS2YKP6p7"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="Confidence">
+                    <img src="./images/confidence-img.png" text="Confidence" alt="error">
+                    <div class="summary">
+                        <h5>Saúde</h5>
+                        <h4>Confidence Dental Care</h4>
+                        <p>Clínica do Dr. Fabio Browne de Paula. Renomado dentista com 35 anos de experiência. Especialista em implante, endodontia, periodontia.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">15336 31st Ave Unit 307, Surrey, BC V3Z 0X2</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/giaE7anux3jswwyu7"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <article class="card" id="BrunaCosta">
+                    <img src="./images/brunacosta-img.png" text="Bruna Costa" alt="error">
+                    <div class="summary">
+                        <h5>Saúde</h5>
+                        <h4>Bruna Costa - Psicóloga</h4>
+                        <p>Bruna Costa se formou em psicologia me 2008 e oferece aconselhamento em Inglês, Espanhol e Português, usando o método da Terapia Cognitiva Comportamental.</p>
+                    </div>
+                    <div class="info">
+                        <p class="address"><img src="./images/icons/location-icon.svg" alt="error">1125 Howe St, 610, Vancouver</p>
+                        <p class="priceAverage"><img src="./images/icons/price-icon.svg" alt="error"><span id="yellow">$$$</span>$$</p>
+                    </div>
+                    <a href="https://brunacostacounselling.com/"><button class="cardButton">Conheça <img id="seta" src="./images/icons/arrow-icon.svg" alt="error"></button></a>
+                </article>
+                <img id="healthRightArrow" onclick="healthScrollRight()" src="./images/icons/arrow-icon.svg" alt="error">
+            </span>
+            <div class="bulletPoints">
+                    <img id="healthBulletPointLeft" src="./images/icons/bullet-icon.svg" alt="error">
+                    <img id="healthBulletPointRight" src="./images/icons/bullet-icon.svg" alt="error">
+            </div>
+        </section>
+        <section class="register" id="register">
             <h3>Anuncie seu negócio</h3>
             <p>Quer fazer parte dessa rede? <br>
             Cadastre seu serviço ou empresa!</p>
-            <form action="">
+            <form action="https://formspree.io/f/xrbqnqny" method="post">
                 <label for="Name">Nome do seu negócio</label>
                 <input type="text" placeholder="Digite seu nome ou nome do seu negócio">
                 <label for="E-mail">Seu e-mail</label>
-                <input type="email" placeholder="Digite seu e-mail">
+                <input name="email" type="email" placeholder="Digite seu e-mail">
                 <label for="Categoria">Categoria</label>
                 <select name="Categories" id="category">
                     <option value="categoria">Escolha a categoria do seu negócio</option>

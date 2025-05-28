@@ -1,33 +1,86 @@
-const btnNext = document.getElementById('next')
-const btnPrevious = document.getElementById('previous')
-const slider = document.querySelector('slider')
-const card = document.querySelector('card')
+// DROPDOWN MENU
 
-const { width: slideWidth } = window.getComputedStyle(slider)
-const { width: cardWidth } = window.getComputedStyle(card)
+var DropDownMenu = window.document.querySelector(".dropDownMenu .content");
 
-const slideProps = {
-    width: parseInt(slideWidth),
-    scroll: 0,
+function SlideDown() {
+    DropDownMenu.style = "display: inline-block"
+}
+function SlideUp() {
+    DropDownMenu.style = "display: none"
 }
 
-function controlSlide({ target: { id } }) {
-    switch (id) {
-        case 'next': {
-            if (slideProps.scroll + slideProps.width < parseInt(cardWidht)) {
-                slideProps.scroll += slideProps.width;
-            }
-            return slider.scrollLeft = slideProps.scroll;
-        }
-                    
-        case 'previous':
-            slideProps.scroll = slideProps.scroll - slideProps.width < 0 ? 0 : slideProps.scroll - slideProps.width;
-            return slider.scrollLeft = slideProps.scroll;
+//RESTAURANTES
 
-        default:
-            break;
-    }
+var Boteco = window.document.getElementById("Boteco")
+var Rio = window.document.getElementById("Rio")
+var BrazilGourmet = window.document.getElementById("BrazilGourmet")
+var Mineiros = window.document.getElementById("Mineiros")
+var Braziliant = window.document.getElementById("Braziliant")
+var restaurantBulletPointLeft = window.document.getElementById("restaurantBulletPointLeft")
+var restaurantBulletPointRight = window.document.getElementById("restaurantBulletPointLeft")
+var restaurantRightArrow = window.document.getElementById("restaurantRightArrow")
+var restaurantLeftArrow = window.document.getElementById("restaurantLeftArrow")
+
+function restaurantScrollRight() {
+    Boteco.style = "display: none"
+    Braziliant.style = "display: block"
+    restaurantBulletPointLeft.style = "display: none"
+    restaurantBulletPointRight.style = "display: center; transform: rotate(180deg)"
 }
 
-btnNext.addEventListener('click', controlSlide)
-btnPrevious.addEventListener('click, controlSlide')
+function restaurantScrollLeft() {
+    Boteco.style = "display: block"
+    Braziliant.style = "display: none"
+    restaurantBulletPointLeft.style = "display: center"
+}
+
+//BELEZA E ESTÉTICA
+
+var Brisa = window.document.getElementById("Brisa")
+var Sil = window.document.getElementById("Sil")
+var DonaLucia = window.document.getElementById("DonaLucia")
+var Nara = window.document.getElementById("Nara")
+var NataliaSimoes = window.document.getElementById("NataliaSimoes")
+var beautyBulletPointLeft = window.document.getElementById("beautyBulletPointLeft")
+var beautyBulletPointRight = window.document.getElementById("beautyBulletPointLeft")
+var beautyRightArrow = window.document.getElementById("beautyRightArrow")
+var beautyLeftArrow = window.document.getElementById("beautyLeftArrow")
+
+function beautyScrollRight() {
+    Brisa.style = "display: none"
+    NataliaSimoes.style = "display: block"
+    beautyBulletPointLeft.style = "display: none"
+    beautyBulletPointRight.style = "display: center; transform: rotate(180deg)"
+}
+
+function beautyScrollLeft() {
+    Brisa.style = "display: block"
+    NataliaSimoes.style = "display: none"
+    beautyBulletPointLeft.style = "display: center"
+}
+
+//SAÚDE
+
+
+var BemStar = window.document.getElementById("BemStar")
+var Connecta = window.document.getElementById("Connecta")
+var VidaNova = window.document.getElementById("VidaNova")
+var Confidence = window.document.getElementById("Confidence")
+var BrunaCosta = window.document.getElementById("BrunaCosta")
+var healthBulletPointLeft = window.document.getElementById("healthBulletPointLeft")
+var healthBulletPointRight = window.document.getElementById("healthBulletPointLeft")
+var healthRightArrow = window.document.getElementById("healthRightArrow")
+var healthLeftArrow = window.document.getElementById("healthLeftArrow")
+
+function healthScrollRight() {
+    BemStar.style = "display: none"
+    BrunaCosta.style = "display: block"
+    healthBulletPointLeft.style = "display: none"
+    healthBulletPointRight.style = "display: center; transform: rotate(180deg)"
+}
+
+function healthScrollLeft() {
+    BemStar.style = "display: block"
+    BrunaCosta.style = "display: none"
+    healthBulletPointLeft.style = "display: center"
+}
