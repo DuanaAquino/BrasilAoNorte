@@ -16,7 +16,7 @@ nav{
     border: 0;
     border-bottom: solid #DDD1D6;
 }
-nav > img{
+#Logo{
     width: 21.75rem;
     height: 2.43rem;
 }
@@ -112,7 +112,8 @@ input[type="search"]{
     font-weight: 600;
     border: solid #0F62FE;
     padding: 1rem 2rem;
-    margin-left: 1rem;
+    /*margin-left: 1rem;*/
+    cursor: pointer;
 }
 h1{
     font-size: 3rem;
